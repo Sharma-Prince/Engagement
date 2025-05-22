@@ -1,0 +1,358 @@
+// List your photos and videos here
+const photoFiles = [
+    "DSC04803.JPG",
+    "DSC04804.JPG",
+    "DSC04805.JPG",
+    "DSC04806.JPG",
+    "DSC04807.JPG",
+    "DSC04808.JPG",
+    "DSC04809.JPG",
+    "DSC04810.JPG",
+    "DSC04811.JPG",
+    "DSC04812.JPG",
+    "DSC04813.JPG",
+    "DSC04814.JPG",
+    "DSC04815.JPG",
+    "DSC04816.JPG",
+    "DSC04817.JPG",
+    "DSC04818.JPG",
+    "DSC04819.JPG",
+    "DSC04820.JPG",
+    "DSC04821.JPG",
+    "DSC04822.JPG",
+    "DSC04823.JPG",
+    "DSC04824.JPG",
+    "DSC04825.JPG",
+    "DSC04826.JPG",
+    "DSC04827.JPG",
+    "DSC04828.JPG",
+    "DSC04829.JPG",
+    "DSC04830.JPG",
+    "DSC04831.JPG",
+    "DSC04832.JPG",
+    "DSC04833.JPG",
+    "DSC04834.JPG",
+    "DSC04835.JPG",
+    "DSC04836.JPG",
+    "DSC04837.JPG",
+    "DSC04838.JPG",
+    "DSC04839.JPG",
+    "DSC04840.JPG",
+    "DSC04841.JPG",
+    "DSC04842.JPG",
+    "DSC04843.JPG",
+    "DSC04844.JPG",
+    "DSC04845.JPG",
+    "DSC04846.JPG",
+    "DSC04847.JPG",
+    "DSC04848.JPG",
+    "DSC04849.JPG",
+    "DSC04850.JPG",
+    "DSC04851.JPG",
+    "DSC04852.JPG",
+    "DSC04853.JPG",
+    "DSC04854.JPG",
+    "DSC04855.JPG",
+    "DSC04856.JPG",
+    "DSC04857.JPG",
+    "DSC04858.JPG",
+    "DSC04859.JPG",
+    "DSC04860.JPG",
+    "DSC04861.JPG",
+    "DSC04862.JPG",
+    "DSC04863.JPG",
+    "DSC04864.JPG",
+    "DSC04865.JPG",
+    "DSC04866.JPG",
+    "DSC04867.JPG",
+    "DSC04868.JPG",
+    "DSC04869.JPG",
+    "DSC04870.JPG",
+    "DSC04871.JPG",
+    "DSC04872.JPG",
+    "DSC04873.JPG",
+    "DSC04874.JPG",
+    "DSC04875.JPG",
+    "DSC04876.JPG",
+    "DSC04877.JPG",
+    "DSC04878.JPG",
+    "DSC04879.JPG",
+    "DSC04880.JPG",
+    "DSC04881.JPG",
+    "DSC04882.JPG",
+    "DSC04883.JPG",
+    "DSC04884.JPG",
+    "DSC04885.JPG",
+    "DSC04886.JPG",
+    "DSC04887.JPG",
+    "DSC04888.JPG",
+    "DSC04889.JPG",
+    "DSC04890.JPG",
+    "DSC04891.JPG",
+    "DSC04892.JPG",
+    "DSC04893.JPG",
+    "DSC04894.JPG",
+    "DSC04895.JPG",
+    "DSC04896.JPG",
+    "DSC04897.JPG",
+    "DSC04898.JPG",
+    "DSC04899.JPG",
+    "DSC04900.JPG",
+    "DSC04901.JPG",
+    "DSC04902.JPG",
+    "DSC04903.JPG",
+    "DSC04904.JPG",
+    "DSC04905.JPG",
+    "DSC04906.JPG",
+    "DSC04907.JPG",
+    "DSC04908.JPG",
+    "DSC04909.JPG",
+    "DSC04910.JPG",
+    "DSC04911.JPG",
+    "DSC04912.JPG",
+    "DSC04913.JPG",
+    "DSC04914.JPG",
+    "DSC04915.JPG",
+    "DSC04916.JPG",
+    "DSC04917.JPG",
+    "DSC04918.JPG",
+    "DSC04919.JPG",
+    "DSC04920.JPG",
+    "DSC04921.JPG",
+    "DSC04922.JPG",
+    "DSC04923.JPG",
+    "DSC04924.JPG",
+    "DSC04925.JPG",
+    "DSC04926.JPG",
+    "DSC04927.JPG",
+    "DSC04928.JPG",
+    "DSC04929.JPG",
+    "DSC04930.JPG",
+    "DSC04931.JPG",
+    "DSC04932.JPG",
+    "DSC04933.JPG",
+    "DSC04934.JPG",
+    "DSC04935.JPG",
+    "DSC04936.JPG",
+    "DSC04937.JPG",
+    "DSC04938.JPG",
+    "DSC04939.JPG",
+    "DSC04940.JPG",
+    "DSC04941.JPG",
+    "DSC04942.JPG",
+    "DSC04943.JPG",
+    "DSC04944.JPG",
+    "DSC04945.JPG",
+    "DSC04946.JPG",
+    "DSC04947.JPG",
+    "DSC04948.JPG",
+    "DSC04949.JPG",
+    "DSC04950.JPG",
+    "DSC04951.JPG",
+    "DSC04952.JPG",
+    "DSC04953.JPG",
+    "DSC04954.JPG",
+    "DSC04955.JPG",
+    "DSC04956.JPG",
+    "DSC04957.JPG",
+    "DSC04958.JPG",
+    "DSC04959.JPG",
+    "DSC04960.JPG",
+    "DSC04961.JPG",
+    "DSC04962.JPG",
+    "DSC04963.JPG",
+    "DSC04964.JPG",
+    "DSC04965.JPG",
+    "DSC04966.JPG",
+    "DSC04967.JPG",
+    "DSC04968.JPG",
+    "DSC04969.JPG",
+    "DSC04970.JPG",
+    "DSC04971.JPG",
+    "DSC04972.JPG",
+    "DSC04973.JPG",
+    "DSC04974.JPG",
+    "DSC04975.JPG",
+    "DSC04976.JPG",
+    "DSC04977.JPG",
+    "DSC04978.JPG",
+    "DSC04979.JPG",
+    "DSC04980.JPG",
+    "DSC04981.JPG",
+    "DSC04982.JPG",
+    "DSC04983.JPG",
+    "DSC04984.JPG",
+    "DSC04985.JPG",
+    "DSC04986.JPG",
+    "DSC04987.JPG",
+    "DSC04988.JPG",
+    "DSC04989.JPG",
+    "DSC04990.JPG",
+    "DSC04991.JPG",
+    "DSC04992.JPG",
+    "DSC04993.JPG",
+    "DSC04995.JPG",
+    "DSC04996.JPG",
+    "DSC04997.JPG",
+    "DSC04998.JPG",
+    "DSC049dd84.JPG",
+    "DSC05000.JPG",
+    "DSC05001.JPG",
+    "DSC05002.JPG",
+    "DSC05003.JPG",
+    "DSC05004.JPG",
+    "DSC05005.JPG",
+    "DSC05006.JPG",
+    "DSC05007.JPG",
+    "DSC05008.JPG",
+    "DSC05009.JPG",
+    "DSC05011.JPG",
+    "DSC05013.JPG",
+    "DSC05023.JPG",
+    "DSC05026.JPG",
+    "DSC05029.JPG",
+    "DSC05032.JPG",
+    "DSC05047.JPG",
+    "DSC05048.JPG",
+    "DSC05049.JPG",
+    "DSC05050.JPG",
+    "DSC05051.JPG",
+    "DSC05052 - Copy.JPG",
+    "DSC05052.JPG",
+    "DSC05053.JPG",
+    "wallpaper.JPG"
+];
+const videoFiles = ["video1.mp4", "video2.mp4"];
+
+let currentPhotoIndex = null;
+
+// Load gallery content
+function loadGallery() {
+    const photoGallery = document.getElementById("photo-gallery");
+    const videoGallery = document.getElementById("video-gallery");
+
+    // Load photos
+    photoFiles.forEach((file, index) => {
+        const img = document.createElement("img");
+        img.src = `photos/${file}`;
+        img.alt = file;
+        img.onclick = () => openImageFullscreen(index);
+        photoGallery.appendChild(img);
+    });
+
+    // Load videos
+    videoFiles.forEach(file => {
+        const video = document.createElement("video");
+        video.controls = true;
+        video.onclick = () => openFullscreen(video);
+
+        const source = document.createElement("source");
+        source.src = `videos/${file}`;
+        source.type = "video/mp4";
+
+        video.appendChild(source);
+        videoGallery.appendChild(video);
+    });
+}
+
+// Show/hide sections
+function showSection(section) {
+    const photoSection = document.getElementById("photos");
+    const videoSection = document.getElementById("videos");
+    const navPhotos = document.getElementById("nav-photos");
+    const navVideos = document.getElementById("nav-videos");
+
+    if (section === "photos") {
+        photoSection.classList.remove("hidden");
+        photoSection.classList.add("visible");
+        videoSection.classList.remove("visible");
+        videoSection.classList.add("hidden");
+        navPhotos.classList.add("active");
+        navVideos.classList.remove("active");
+    } else {
+        videoSection.classList.remove("hidden");
+        videoSection.classList.add("visible");
+        photoSection.classList.remove("visible");
+        photoSection.classList.add("hidden");
+        navPhotos.classList.remove("active");
+        navVideos.classList.add("active");
+    }
+}
+
+// ------------------ FULLSCREEN PHOTO VIEWER ------------------
+
+function openImageFullscreen(index) {
+    currentPhotoIndex = index;
+
+    const fullscreenImg = document.createElement("img");
+    fullscreenImg.src = `photos/${photoFiles[index]}`;
+    fullscreenImg.style.maxWidth = "90%";
+    fullscreenImg.style.maxHeight = "90vh";
+    fullscreenImg.id = "fullscreen-viewer";
+
+    const container = document.createElement("div");
+    container.id = "fullscreen-container";
+    Object.assign(container.style, {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "rgba(0,0,0,0.95)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 9999
+    });
+
+    container.appendChild(fullscreenImg);
+    document.body.appendChild(container);
+
+    document.addEventListener("keydown", handleKey);
+    container.onclick = closeFullscreenViewer;
+}
+
+function handleKey(e) {
+    if (currentPhotoIndex === null) return;
+
+    if (e.key === "ArrowRight") {
+        if (currentPhotoIndex < photoFiles.length - 1) {
+            currentPhotoIndex++;
+            updateFullscreenImage();
+        }
+    } else if (e.key === "ArrowLeft") {
+        if (currentPhotoIndex > 0) {
+            currentPhotoIndex--;
+            updateFullscreenImage();
+        }
+    } else if (e.key === "Escape") {
+        closeFullscreenViewer();
+    }
+}
+
+function updateFullscreenImage() {
+    const fullscreenImg = document.getElementById("fullscreen-viewer");
+    fullscreenImg.src = `photos/${photoFiles[currentPhotoIndex]}`;
+}
+
+function closeFullscreenViewer() {
+    const container = document.getElementById("fullscreen-container");
+    if (container) container.remove();
+    document.removeEventListener("keydown", handleKey);
+    currentPhotoIndex = null;
+}
+
+// ------------------ FULLSCREEN FOR VIDEO ------------------
+
+function openFullscreen(element) {
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+}
+
+// Load after DOM ready
+document.addEventListener("DOMContentLoaded", loadGallery);

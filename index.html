@@ -2,33 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video Player</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    video { width: 100%; max-width: 600px; margin-top: 20px; }
-  </style>
+  <title>My Gallery Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>My Video Collection</h1>
-  
-  <select id="videoSelector">
-    <option value="C0334.MP4">Video 1</option>
-    <option value="C0335.MP4">Video 2</option>
-  </select>
+<nav>
+  <ul>
+    <li><a href="#" id="nav-photos" class="active" onclick="showSection('photos')">Photos</a></li>
+    <li><a href="#" id="nav-videos" onclick="showSection('videos')">Videos</a></li>
+  </ul>
+</nav>
 
-  <video id="videoPlayer" controls>
-    <source src="C0335.MP4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<section id="photos" class="visible">
+  <h2>Photo Gallery</h2>
+  <div class="gallery" id="photo-gallery"></div>
+</section>
 
-  <script>
-    const selector = document.getElementById('videoSelector');
-    const player = document.getElementById('videoPlayer');
-    
-    selector.addEventListener('change', function() {
-      player.src = this.value;
-      player.play();
-    });
-  </script>
+<section id="videos" class="hidden">
+  <h2>Video Gallery</h2>
+  <div class="gallery" id="video-gallery"></div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
